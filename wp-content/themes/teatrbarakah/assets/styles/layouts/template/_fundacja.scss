@@ -1,0 +1,42 @@
+/* stylelint-disable */
+.section-fundacja {
+  padding-top: 270px;
+  padding-bottom: 60px;
+
+  .left-block {
+    margin-right: 18px;
+
+    @include breakpoint(large down) {
+      margin-right: 0;
+    }
+  }
+
+  .right-block {
+    margin-left: 18px;
+
+    @include breakpoint(large down) {
+      margin-left: 0;
+    }
+
+  }
+
+  &__item {
+    @include breakpoint(large down) {
+      margin-bottom: 30px;
+    }
+
+    &.border-bot {
+      border-bottom: 10px solid $black;
+    }
+  }
+
+  .has-image {
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+
+    .section-fundacja__item--text {
+      padding: 35px 40px;
+    }
+  }
+}

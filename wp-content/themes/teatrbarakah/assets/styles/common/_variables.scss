@@ -1,2 +1,24 @@
-$color-main: #eff6fc;
-$color-secondary: #fff0ee;
+@import "~foundation-sites/scss/util/util";
+// Go to '../../../node_modules/foundation-sites/scss/settings/_settings.scss' and set you own Foundation Settings here
+
+/** Colors */
+$foundation-palette: (
+  primary: #27ae60,
+  secondary: #1866ff,
+  success: #3adb76,
+  warning: #ffae00,
+  alert: #cc4b37
+);
+
+$white: #fff;
+$black: #000;
+$black1: #111;
+$yellow: #fef200;
+$yellow2: #fff200;
+$grey: #e1e1e1;
+$grey_2: #838485;
+$grey_3: #dadddd;
+$grey_4: #e6e6e6;
+$grey_5: #f7f7f7;
+$font-muli: 'Muli';
+$font-roboto: 'Roboto', sans-serif;

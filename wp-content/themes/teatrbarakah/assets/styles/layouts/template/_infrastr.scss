@@ -1,0 +1,109 @@
+/* stylelint-disable */
+.infrastr-section {
+  padding-top: 270px;
+  padding-bottom: 100px;
+  overflow: hidden;
+  background-color: $grey_5;
+
+  &__title {
+    @include breakpoint(medium down) {
+      border-bottom: 10px solid $black;
+      margin-bottom: 0;
+      padding-bottom: 18px;
+    }
+
+  }
+
+  @include breakpoint(medium down) {
+    .grid-container {
+      padding-bottom: 31px;
+      border-bottom: 10px solid $black;
+    }
+  }
+
+  .desk {
+    @include breakpoint(medium down) {
+      display: none;
+    }
+  }
+
+  .mob {
+    display: none;
+    @include breakpoint(medium down) {
+      display: block;
+    }
+  }
+
+  &__img {
+    position: relative;
+
+    &.image-left {
+      margin-right: 22px;
+
+      @include breakpoint(medium down) {
+        margin-right: 0;
+      }
+
+      &:after {
+        right: initial;
+        left: -100%;
+      }
+    }
+
+    &.image-right {
+      margin-left: 22px;
+      @include breakpoint(medium down) {
+        margin-left: 0;
+      }
+    }
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+      @include breakpoint(large down) {
+        height: 800px;
+      }
+
+      @include breakpoint(medium down) {
+        height: 100%;
+      }
+    }
+  }
+
+  &__text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+
+    &.text-right-pos {
+      margin-left: 22px;
+
+      @include breakpoint(medium down) {
+        margin-left: 0;
+      }
+    }
+
+    &.text-left-pos {
+      margin-right: 22px;
+      @include breakpoint(medium down) {
+        margin-right: 0;
+      }
+    }
+
+    &.border-top {
+      border-top: 10px solid $black1;
+    }
+
+    &.border-bottom {
+      border-bottom: 10px solid $black1;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+  }
+}

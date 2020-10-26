@@ -1,0 +1,141 @@
+/* stylelint-disable */
+.section-barakah {
+  padding: 270px 0 30px;
+  min-height: 100vh;
+  background-size: cover;
+
+  @include breakpoint(350px down) {
+    padding: 170px 0 30px;
+  }
+
+
+  &__hero-text {
+    margin-bottom: 30px;
+  }
+
+  .top-default-block,
+  .bottom-default-block {
+    display: none;
+    @include breakpoint(medium down) {
+      display: block;
+    }
+  }
+
+  &__items {
+    .cell {
+      padding: 0 25.5px;
+      margin-bottom: 30px;
+      @include breakpoint(medium down) {
+        margin-bottom: 5px;
+      }
+
+    }
+
+    .default-block {
+      @include breakpoint(medium down) {
+        display: none;
+      }
+    }
+
+    .grid-container {
+      overflow: hidden;
+    }
+
+    .grid-x {
+      margin-left: -25px !important;
+      margin-right: -25px !important;
+    }
+
+    .item {
+      position: relative;
+      max-width: 360px;
+      margin: 0 auto;
+      width: 100%;
+      overflow: hidden;
+      height: 100%;
+
+      @include breakpoint(medium down) {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+
+      &.default {
+        .item__image {
+          background-color: $yellow;
+          padding: 35px 0;
+
+          @include breakpoint(medium down) {
+            padding: 0;
+          }
+
+
+          img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+          }
+
+          &:after {
+            display: none;
+          }
+        }
+      }
+
+      a {
+        &:hover {
+          .item__image {
+            &:after {
+              background-color: rgba(0, 0, 0, 0);
+            }
+          }
+        }
+      }
+
+
+      &__image {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+
+        &:after {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, 0.5);
+          transition: 0.4s ease;
+          content: '';
+        }
+
+        @include breakpoint(medium down) {
+          height: 107px;
+        }
+      }
+
+      .title-link {
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 23px;
+        font-family: $font-roboto;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: $yellow;
+      }
+    }
+  }
+}

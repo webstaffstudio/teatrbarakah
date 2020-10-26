@@ -1,1 +1,71 @@
 //global styles
+/* stylelint-disable */
+a {
+  transition: 0.4s ease;
+}
+
+* {
+  &:focus {
+    outline: none;
+  }
+}
+
+p {
+  font-size: 19px;
+  font-weight: 400;
+  font-family: $font-roboto;
+  line-height: 25px;
+  color: $black;
+
+  strong {
+    font-weight: 700;
+    font-family: $font-roboto;
+  }
+}
+
+.pos-rel {
+  position: relative;
+}
+
+.default-title {
+  font-family: $font-roboto;
+  font-size: 35px;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.default-text {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  font-family: $font-roboto;
+  color: $black;
+
+  p {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    color: inherit;
+    font-family: inherit;
+  }
+}
+
+.yellow-block-pos {
+  &:after {
+    width: 100%;
+    height: 250px;
+    background-color: $yellow;
+    content: '';
+    position: absolute;
+    right: -100%;
+    top: 50%;
+    z-index: 0;
+    transform: translateY(-50%);
+
+    @include breakpoint(medium down) {
+      display: none;
+    }
+  }
+}

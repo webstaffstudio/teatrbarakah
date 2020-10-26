@@ -1,0 +1,92 @@
+/* stylelint-disable */
+.section-dir {
+  background-size: cover;
+  overflow: hidden;
+
+  .left-block {
+    padding-right: 31px;
+    margin-bottom: 150px;
+
+    @include breakpoint(medium down) {
+      padding-right: 0.625rem;
+      margin-bottom: 30px;
+    }
+  }
+
+  .right-block {
+    padding-left: 31px;
+    margin-bottom: 150px;
+    @include breakpoint(medium down) {
+      padding-left: 0.625rem;
+      margin-bottom: 30px;
+    }
+  }
+
+  .use-border {
+    border-bottom: 10px solid $black;
+  }
+
+  &__item {
+    &--image {
+      width: 100%;
+      padding: 38px 10px;
+      background-color: $grey_4;
+      text-align: center;
+      position: relative;
+      margin-bottom: 51px;
+
+      @include breakpoint(medium down) {
+        max-height: 430px;
+        overflow: hidden;
+        padding: 0;
+        background-color: transparent;
+        margin-bottom: 30px;
+      }
+
+      &.left-yellow-block {
+        &:after {
+          left: -100%;
+          right: initial;
+        }
+      }
+
+
+      img {
+        max-width: 480px;
+        margin: 0 auto;
+        z-index: 10;
+        height: auto;
+        width: 100%;
+      }
+    }
+
+    &--text {
+      font-family: $font-roboto;
+      font-size: 19px;
+      font-weight: 400;
+      letter-spacing: 1.9px;
+      line-height: 25px;
+
+      p {
+        line-height: inherit;
+        font-size: inherit;
+        letter-spacing: inherit;
+      }
+
+      h3 {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    padding-top: 252px;
+
+    @include breakpoint(350px down) {
+      padding-top: 186px;
+    }
+  }
+}

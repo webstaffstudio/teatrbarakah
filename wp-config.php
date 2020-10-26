@@ -20,6 +20,7 @@ define('NONCE_SALT',       '3e*TTuwo!Nc;1mF2ULM)V Stf/DUY0Q#x,0&M+i[6w!bIF?CQn!V
 
 $table_prefix  = 'fxgpk_';
 define('WP_DEBUG', true);
+define('WP_DEBUG_LOG', true);
 if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
 $_SERVER['HTTPS'] = 'on';
 }
